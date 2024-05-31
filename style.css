@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(147, 87, 215);
+    color: whitesmoke;
+    margin: 0;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive;
+}
+
+.name {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 7vh;
+    font-size: 5vh;
+    align-items: center;
+}
+
+body {
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background-color: #252629;
+    color: #fff;
+}
+
+body.dark span {
+    color: aliceblue;
+}
+
+body.dark .box:hover {
+    background-color: rgba(30, 28, 28, 0.267);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+.info {
+    font-size: 25px;
+}
+
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: cursive;
+    position: relative;
+}
+
+.box {
+    border: 1px solid rgb(138, 0, 251);
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: whitesmoke;
+}
+
+.gameinfo {
+    padding: 0;
+    margin-left: 10vw;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 23px;
+    padding: 1px 18px;
+    background-color: #bba9ef;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line {
+    background-color: rgb(237, 18, 18);
+    width: 0;
+    height: 10px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+    border-radius: 5px
+}
+#music{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border: none;
+}
+body.dark #music{
+    background-color: #fff;
+}
+/* @media screen and (max-width:950px) {
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+
+    .gameinfo {
+        margin-top: 34px;
+    }
+
+    .gameinfo h1 {
+        font-size: 2.5rem;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+} */
