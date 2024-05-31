@@ -7,7 +7,7 @@ console.log("Creative Commons CC BY 3.0")
 console.log("https://creativecommons.org/licenses/by/3.0/")
 //music files
 let music = new Audio("Colorful-Flowers(chosic.com).mp3");
-music.play();
+//music.play();
 let audioTurn = new Audio("turn.WAV");
 let gameover = new Audio("gameover.mp3");
 
